@@ -1,4 +1,4 @@
-export type CurrencyCode = 'USD' | 'GBP' | 'EUR' | 'CHF' | 'HKD';
+export type CurrencyCode = 'INR' | 'USD' | 'GBP' | 'EUR' | 'CHF' | 'HKD';
 
 export interface CurrencyRate {
   code: CurrencyCode;

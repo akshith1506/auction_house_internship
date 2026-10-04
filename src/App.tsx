@@ -35,8 +35,8 @@ export default function App() {
   // Navigation & View State
   const [activeNavTab, setActiveNavTab] = useState<string>('saleroom');
 
-  // Currency State
-  const [currency, setCurrency] = useState<CurrencyCode>('USD');
+  // Currency State (default to INR)
+  const [currency, setCurrency] = useState<CurrencyCode>('INR');
 
   // Active Lots State
   const [heroLotState, setHeroLotState] = useState<LotItem>(HERO_LOT);

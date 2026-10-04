@@ -1,6 +1,7 @@
 import { CurrencyCode, CurrencyRate, LotItem, EditorialArticle, DepartmentInfo, BidEntry } from '../types/auction';
 
 export const CURRENCY_RATES: Record<CurrencyCode, CurrencyRate> = {
+  INR: { code: 'INR', symbol: '₹', rate: 84.5 },
   USD: { code: 'USD', symbol: '$', rate: 1.0 },
   GBP: { code: 'GBP', symbol: '£', rate: 0.785 },
   EUR: { code: 'EUR', symbol: '€', rate: 0.925 },
@@ -9,8 +10,11 @@ export const CURRENCY_RATES: Record<CurrencyCode, CurrencyRate> = {
 };
 
 export function formatCurrency(amountUSD: number, currency: CurrencyCode): string {
-  const info = CURRENCY_RATES[currency] || CURRENCY_RATES.USD;
+  const info = CURRENCY_RATES[currency] || CURRENCY_RATES.INR;
   const converted = amountUSD * info.rate;
+  if (info.code === 'INR') {
+    return `₹${Math.round(converted).toLocaleString('en-IN')}`;
+  }
   if (info.code === 'CHF') {
     return `CHF ${Math.round(converted).toLocaleString()}`;
   }

@@ -95,7 +95,7 @@ export const Header: React.FC<HeaderProps> = ({
             <div className="flex items-center gap-2">
               <span className="text-[#9c8e82] font-label-caps hidden md:inline">CURRENCY</span>
               <div className="flex items-center gap-1 bg-[#1a1a2e] px-1.5 py-0.5 rounded border border-[#28283d]">
-                {(['USD', 'GBP', 'EUR', 'CHF'] as CurrencyCode[]).map((cur, idx, arr) => (
+                {(['INR', 'USD', 'GBP', 'EUR', 'CHF'] as CurrencyCode[]).map((cur, idx, arr) => (
                   <React.Fragment key={cur}>
                     <button
                       onClick={() => onSelectCurrency(cur)}
