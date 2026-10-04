@@ -1,0 +1,6 @@
+{
+  "name": "Aurelia Maison d'Enchères",
+  "description": "Premier international saleroom for singular masterpieces, historic archives, museum-grade antiquities, and bespoke collection acquisitions in Geneva, London, and New York.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
